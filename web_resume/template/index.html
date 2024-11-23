@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center bg-light p-5">
+    <h1 class="display-4">Welcome to My Resume</h1>
+    <p class="lead">Explore my journey in software developing, software engineering, machine learning and more.</p>
+    <a href="{% url 'education' %}" class="btn btn-primary btn-lg">My Education</a>
+    <a href="{% url 'work' %}" class="btn btn-secondary btn-lg">My Work</a>
+    <a href="{% url 'profile' %}" class="btn btn-success btn-lg">My Profile</a>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Education</h5>
+                <p class="card-text">Learn about my academic achievements and certifications.</p>
+                <a href="{% url 'education' %}" class="btn btn-outline-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fas fa-briefcase fa-3x text-success mb-3"></i>
+                <h5 class="card-title">Work Experience</h5>
+                <p class="card-text">Discover my professional career journey.</p>
+                <a href="{% url 'work' %}" class="btn btn-outline-success">View Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fas fa-user-circle fa-3x text-info mb-3"></i>
+                <h5 class="card-title">Profile</h5>
+                <p class="card-text">Get a quick summary of who I am and what I do.</p>
+                <a href="{% url 'profile' %}" class="btn btn-outline-info">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
